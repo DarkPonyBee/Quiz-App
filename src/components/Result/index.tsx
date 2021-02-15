@@ -1,8 +1,6 @@
 import React from "react";
-import { View, Text } from "react-native";
 import styled from "styled-components/native";
 import { decode } from "html-entities";
-
 import colors from "../../config/colors";
 
 interface ResultProps {
@@ -28,7 +26,7 @@ const AnswerResult: React.FC<AnswerResultProps> = ({
   );
 };
 
-const AnswerContainer = styled(View)`
+const AnswerContainer = styled.View`
   justify-content: space-between;
   align-items: flex-start;
   margin: 15px 10px;
@@ -49,7 +47,7 @@ const AnswerText = styled.Text<AnswerTextProps>`
   text-align: left;
 `;
 
-const QuestionText = styled(Text)`
+const QuestionText = styled.Text`
   color: ${colors.darkGrey};
   font-size: 14px;
   font-weight: 500;

@@ -1,9 +1,8 @@
 import React from "react";
-import { FlatList, ScrollView, View, Text, SafeAreaView } from "react-native";
+import { FlatList } from "react-native";
 import { useSelector, useDispatch } from "react-redux";
 import styled from "styled-components/native";
 import ProgressBarAnimated from "@betacode/react-native-progress-bar-animated";
-
 import AnswerResult from "../../components/Result";
 import Button from "../../components/Commons/Button";
 import { endGame } from "../../actions/game-action";

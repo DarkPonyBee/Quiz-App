@@ -1,10 +1,11 @@
 import "react-native-gesture-handler";
-import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, LogBox } from "react-native";
 import { Provider } from "react-redux";
 import AppNavigator from "./src/navigation";
 import store from "./src/config/store";
+
+LogBox.ignoreAllLogs();
 
 export default function App() {
   return (

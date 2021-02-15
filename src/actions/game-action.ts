@@ -2,7 +2,7 @@ import axios from "axios";
 import { ActionType } from "./types";
 import { NavigationService } from "../config/navigationService";
 import { Dispatch } from "redux";
-import { QuestionObject } from "../types/objects";
+import { QuestionObject } from "../types";
 
 export function fetchGame() {
   return async (dispatch: Dispatch) => {

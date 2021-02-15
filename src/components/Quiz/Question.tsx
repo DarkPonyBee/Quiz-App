@@ -1,8 +1,6 @@
 import React from "react";
-import { View, Text } from "react-native";
-import styled from "styled-components";
+import styled from "styled-components/native";
 import { decode } from "html-entities";
-
 import colors from "../../config/colors";
 
 interface ButtonProps {
@@ -29,7 +27,7 @@ export const QButton: React.FC<ButtonProps> = ({
   );
 };
 
-const QuestionContainer = styled(View)`
+const QuestionContainer = styled.View`
   background-color: #ececee;
   border-radius: 3px;
   height: 250px;
@@ -39,7 +37,7 @@ const QuestionContainer = styled(View)`
   justify-content: center;
 `;
 
-const QuestionText = styled(Text)`
+const QuestionText = styled.Text`
   color: ${colors.black};
   font-size: 18px;
   text-align: center;

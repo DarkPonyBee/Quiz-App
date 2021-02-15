@@ -1,11 +1,9 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components/native";
-
 import Button from "../../components/Commons/Button";
 import { fetchGame } from "../../actions/game-action";
 import colors from "../../config/colors";
-
 import { RootState } from "../../reducers";
 
 export const HomeScreen = () => {

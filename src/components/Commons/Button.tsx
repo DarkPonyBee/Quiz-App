@@ -1,8 +1,6 @@
 import React from "react";
-import { TouchableOpacity, Text } from "react-native";
 import { ActivityIndicator } from "react-native";
-import styled from "styled-components";
-
+import styled from "styled-components/native";
 import colors from "../../config/colors";
 
 interface ButtonProps {
@@ -25,7 +23,7 @@ const Button: React.FC<ButtonProps> = ({ text, onPress, isLoading }) => {
   );
 };
 
-const BeginButton = styled(TouchableOpacity)`
+const BeginButton = styled.TouchableOpacity`
   width: 250px;
   height: 50px;
   background-color: ${colors.lightNavy};
@@ -34,7 +32,7 @@ const BeginButton = styled(TouchableOpacity)`
   align-items: center;
 `;
 
-const BeginButtonText = styled(Text)`
+const BeginButtonText = styled.Text`
   color: ${colors.white};
   font-size: 20px;
   font-weight: 500;

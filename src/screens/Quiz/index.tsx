@@ -1,8 +1,6 @@
 import React from "react";
-import { View, SafeAreaView, Text } from "react-native";
 import { useSelector, useDispatch } from "react-redux";
-import styled from "styled-components";
-
+import styled from "styled-components/native";
 import { nextQuestion } from "../../actions/game-action";
 import { QButton as Question } from "../../components/Quiz";
 import { AButton as AnswerButton } from "../../components/Quiz";
@@ -55,25 +53,25 @@ export const QuizScreen = () => {
   );
 };
 
-const QuizSafeArea = styled(SafeAreaView)`
+const QuizSafeArea = styled.SafeAreaView`
   flex: 1;
   background-color: ${colors.iceWhite};
 `;
 
-const QuizContainer = styled(View)`
+const QuizContainer = styled.View`
   flex: 1;
   justify-content: center;
   align-items: center;
   margin: 30px 0;
 `;
 
-const CategoryTitle = styled(Text)`
+const CategoryTitle = styled.Text`
   font-size: 24px;
   font-weight: bold;
   text-align: center;
 `;
 
-const AnswerButtonContainer = styled(SafeAreaView)`
+const AnswerButtonContainer = styled.SafeAreaView`
   flex-direction: row;
   width: 250px;
   justify-content: space-between;

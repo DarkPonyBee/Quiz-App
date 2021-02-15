@@ -1,7 +1,5 @@
-import { StateType } from "typesafe-actions";
-
 import { ActionType } from "../actions/types";
-import { QuestionObject, UserAnswer } from "../types/objects";
+import { QuestionObject, UserAnswer } from "../types";
 
 const gameState = {
   isGameLoading: false,
