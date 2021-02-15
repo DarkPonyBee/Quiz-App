@@ -1,9 +1,12 @@
 import reduxPromise from "redux-promise";
-import { applyMiddleware, createStore } from "redux";
+import { applyMiddleware, combineReducers, createStore } from "redux";
 import reduxThunk from "redux-thunk";
 
 import reducers from "../reducers";
 
 const middle = [reduxPromise, reduxThunk];
 
-export default createStore(reducers, applyMiddleware(...middle));
+const rootReducer = combineReducers({
+  reducers,
+});
+export default createStore(rootReducer, applyMiddleware(...middle));

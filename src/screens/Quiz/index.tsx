@@ -7,23 +7,26 @@ import { nextQuestion } from "../../actions/game-action";
 import { QButton as Question } from "../../components/Quiz";
 import { AButton as AnswerButton } from "../../components/Quiz";
 import colors from "../../config/colors";
+import { RootState } from "../../reducers";
 
 export const QuizScreen = () => {
   const dispatch = useDispatch();
 
-  const questions = useSelector((state) => state.gameReducer.questions);
+  const questions = useSelector((state: RootState) => state.reducers.questions);
   const currentQuestion = useSelector(
-    (state) => state.gameReducer.currentQuestion
+    (state: RootState) => state.reducers.currentQuestion
   );
   const currentCategory = useSelector(
-    (state) => state.gameReducer.currentCategory
+    (state: RootState) => state.reducers.currentCategory
   );
   const currentQuestionIndex = useSelector(
-    (state) => state.gameReducer.currentQuestionIndex
+    (state: RootState) => state.reducers.currentQuestionIndex
   );
-  const totalScore = useSelector((state) => state.gameReducer.totalScore);
+  const totalScore = useSelector(
+    (state: RootState) => state.reducers.totalScore
+  );
 
-  const onAnswerQuestion = (answer) =>
+  const onAnswerQuestion = (answer: string) =>
     dispatch(nextQuestion(questions, answer, currentQuestionIndex, totalScore));
 
   return (

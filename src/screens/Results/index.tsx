@@ -8,12 +8,17 @@ import AnswerResult from "../../components/Result";
 import Button from "../../components/Commons/Button";
 import { endGame } from "../../actions/game-action";
 import colors from "../../config/colors";
+import { RootState } from "../../reducers";
 
 export const ResultScreen = () => {
   const dispatch = useDispatch();
-  const questions = useSelector((state) => state.gameReducer.questions);
-  const totalScore = useSelector((state) => state.gameReducer.totalScore);
-  const userAnswers = useSelector((state) => state.gameReducer.userAnswers);
+  const questions = useSelector((state: RootState) => state.reducers.questions);
+  const totalScore = useSelector(
+    (state: RootState) => state.reducers.totalScore
+  );
+  const userAnswers = useSelector(
+    (state: RootState) => state.reducers.userAnswers
+  );
   const progressPercent = (totalScore / questions.length) * 100;
   const isProgressCompleted =
     progressPercent === 100 ? colors.darkGreen : colors.lightNavy;
@@ -41,6 +46,8 @@ export const ResultScreen = () => {
         <QuestionContainer persistentScrollbar>
           <FlatList
             data={userAnswers}
+            showsVerticalScrollIndicator={false}
+            keyExtractor={(item) => item.correct_answer}
             renderItem={({ item }) => <AnswerResult result={item} />}
           />
         </QuestionContainer>

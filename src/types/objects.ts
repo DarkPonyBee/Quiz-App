@@ -6,8 +6,8 @@ export type QuestionObject = {
 
 export type UserAnswer = {
   question: string;
-  correct: string;
-  answer: string;
+  correct_answer: string;
+  userAnswer: string;
 };
 
 export type AppContext = {

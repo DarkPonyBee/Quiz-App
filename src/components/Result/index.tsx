@@ -23,7 +23,6 @@ const AnswerResult: React.FC<AnswerResultProps> = ({
       <AnswerText questionAnswer={correct_answer} userAnswer={userAnswer}>
         {correct_answer}
       </AnswerText>
-
       <QuestionText>{decode(question)}</QuestionText>
     </AnswerContainer>
   );

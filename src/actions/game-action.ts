@@ -2,6 +2,7 @@ import axios from "axios";
 import { ActionType } from "./types";
 import { NavigationService } from "../config/navigationService";
 import { Dispatch } from "redux";
+import { QuestionObject } from "../types/objects";
 
 export function fetchGame() {
   return async (dispatch: Dispatch) => {
@@ -35,10 +36,10 @@ export function fetchGame() {
 }
 
 export function nextQuestion(
-  questions,
-  currentAnswer,
-  currentQuestionIndex,
-  totalScore
+  questions: QuestionObject[],
+  currentAnswer: string,
+  currentQuestionIndex: number,
+  totalScore: number
 ) {
   return async (dispatch: Dispatch) => {
     const nextQuestionIndex = currentQuestionIndex + 1;
